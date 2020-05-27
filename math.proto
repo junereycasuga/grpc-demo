@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message MathRequest {
+  int32 first = 1;
+  int32 second = 2;
+}
+
+message MathResponse {
+  int32 answer = 1;
+}
+
+service Math {
+  rpc add (MathRequest) returns (MathResponse){};
+  rpc subtract (MathRequest) returns (MathResponse){};
+  rpc multiply (MathRequest) returns (MathResponse){};
+  rpc divide (MathRequest) returns (MathResponse){};
+}
